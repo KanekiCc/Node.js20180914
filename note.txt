@@ -1,0 +1,43 @@
+mongodb 安装
+
+打开安装包
+一直next   选择盼复
+finish
+找到mongodb 安装的路径，直至找到bin  进入bin目录  在当前目录打开cmd
+在bin文件里新建两个文件夹  data（数据文件）   log （日志）
+命令：mongod --dbpath="e:/mongodb/data      enter
+
+mongod --dbpath="e:/mongodb/data" 执行enter
+
+启动数据库：
+mongod --dbpath="e:/mongodb/data" 执行enter
+
+mongodb 数据库
+跨平台  面向对象的轻量级数据库  文档和集合
+集合：数据库的一种
+文档：document
+ {
+     id:"1",
+     username:"aaa"
+ }
+
+数据库的类型：
+关系型数据库    非关系型数据库
+
+数据库
+增   db.集合名(如果该集合名之前已经存在，那么插入的数据在此基础上递增，如果集合名不存在，新增集合).insert({})
+     db.集合名.insertMany([{},{}])  插入多个
+     db.集合名.insertOne({})          插入一个
+     db.createCollection("集合名")   创建集合
+删   db.集合名.drop()  删除集合
+     db.集合名.remove()   
+改
+查
+
+命令：
+show dbs 显示当前存在的数据库
+use 数据库名称    使用数据库
+show collections     显示当前选中数据库里面的集合
+db.test2.find()     test2是集合
+db.test3.insert({"username":"tom","age":"20"})    插入
+db  输出当前数据库
